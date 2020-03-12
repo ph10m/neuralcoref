@@ -1116,7 +1116,7 @@ def start(input_fname, conll_fname, output_fname, encoding, changes):
             pretty_print_table_string = pretty_print_table(rows, out_file="-")
 
             if output_fname == "-":
-                print pretty_print_table_string
+                print(pretty_print_table_string)
             else:
                 with codecs.open(output_fname, "a", encoding) as outf:
                     outf.write("%s\n" % (pretty_print_table_string))
