@@ -12,7 +12,6 @@ import torch.nn as nn
 from torch.autograd import Variable
 from torch.optim import RMSprop
 from torch.utils.data import DataLoader
-from tensorboardX import SummaryWriter
 
 from neuralcoref.train.model import Model
 from neuralcoref.train.dataset import (
@@ -128,7 +127,6 @@ def run_model(args):
         "epochs",
     )
     # Tensorboard server
-    writer = SummaryWriter()
 
     # Load datasets and embeddings
     embed_path = args.weights if args.weights is not None else args.train
